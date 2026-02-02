@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://bohw40gnl85yp"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_bqtgj"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_2iuto"]
+
+[sub_resource type="Resource" id="Resource_bqtgj"]
+script = ExtResource("1_bqtgj")
+node_text = "You: “Will that be with cash or card?”"
+next_branch = 6
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_2iuto"]
+script = ExtResource("1_bqtgj")
+prompts_choice_if_singular = true
+choice_text = "(Move on.)"
+node_text = "You: “Will that be with cash or card?”"
+next_branch = 5
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_2iuto")
+branch_text = "Man: “Ain’t that the story of our lives. Hang in there.”"
+late_skip_node = SubResource("Resource_bqtgj")
+no_skip_nodes = Array[ExtResource("1_bqtgj")]([SubResource("Resource_2iuto")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

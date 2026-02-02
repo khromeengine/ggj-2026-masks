@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://d0idf8d1earrg"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_fwyvb"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_cdj84"]
+
+[sub_resource type="Resource" id="Resource_fwyvb"]
+script = ExtResource("1_fwyvb")
+node_text = "You: “I hate my job. I’m never going to do anything more with my life. People I used to know are going missing. Sometimes, I wonder if I should just-“"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_cdj84"]
+script = ExtResource("1_fwyvb")
+choice_text = "(Drop it.)"
+node_text = "You: “Forget it. Will that be with cash or card?”"
+next_branch = 6
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_cdj84")
+branch_text = "Man: “...”"
+branch_text_period = 0.6
+late_skip_node = SubResource("Resource_fwyvb")
+no_skip_nodes = Array[ExtResource("1_fwyvb")]([SubResource("Resource_cdj84")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://ktax33wb4whm"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_lfx1y"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_a5mto"]
+
+[sub_resource type="Resource" id="Resource_lfx1y"]
+script = ExtResource("1_lfx1y")
+node_text = "—: “The world passes us by. The world is against us. The world loved us. We didn’t love it back. We didn’t love each other.”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_a5mto"]
+script = ExtResource("1_lfx1y")
+node_text = "You: “It doesn’t matter-”"
+next_branch = 14
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_0w7ib"]
+script = ExtResource("1_lfx1y")
+choice_text = "“It doesn’t matter.”"
+node_text = "You: “It doesn’t matter-”"
+next_branch = 14
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_dp0by"]
+script = ExtResource("1_lfx1y")
+choice_text = "“What?”"
+node_text = "You: “What?”"
+next_branch = 16
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_a5mto")
+branch_text = "Man: “Oh, sorry. You’ve got something on your face.”"
+early_skip_char_threshold = 12
+early_skip_node = SubResource("Resource_lfx1y")
+late_skip_node = SubResource("Resource_a5mto")
+no_skip_nodes = Array[ExtResource("1_lfx1y")]([SubResource("Resource_0w7ib"), SubResource("Resource_dp0by")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

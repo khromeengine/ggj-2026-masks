@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://t7h820t8o8wm"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_qtyff"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_266ce"]
+
+[sub_resource type="Resource" id="Resource_qtyff"]
+script = ExtResource("1_qtyff")
+choice_text = "(Keep up this charade.)"
+node_text = "You: “Thank you. Swipe whenever you’re ready.”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_266ce"]
+script = ExtResource("1_qtyff")
+choice_text = "“It won’t.”"
+node_text = "You: “It won’t. “"
+next_branch = 18
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_yj30x"]
+script = ExtResource("1_qtyff")
+choice_text = "“It won’t, but…”"
+node_text = "You: “It won’t, but thanks anyway.”"
+next_branch = 19
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_266ce")
+branch_text = "Man: “Card. That sucks to hear. I hope it gets better.”"
+branch_text_unskippable = true
+no_skip_nodes = Array[ExtResource("1_qtyff")]([SubResource("Resource_qtyff"), SubResource("Resource_266ce"), SubResource("Resource_yj30x")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

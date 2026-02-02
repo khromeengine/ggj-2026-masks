@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://c8oil36tswsph"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_h8kwo"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_3h2ln"]
+
+[resource]
+script = ExtResource("2_3h2ln")
+branch_text = "Man: “...”"
+does_end = 1
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

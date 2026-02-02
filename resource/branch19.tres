@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://b431ev42duqe7"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_0dagu"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_6d2b0"]
+
+[sub_resource type="Resource" id="Resource_0dagu"]
+script = ExtResource("1_0dagu")
+node_text = "Man: “I said-”"
+next_branch = 13
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_6d2b0"]
+script = ExtResource("1_0dagu")
+prompts_choice_if_singular = true
+choice_text = "(Keep up this charade.)"
+node_text = "You: “Swipe whenever you’re ready.”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_6d2b0")
+branch_text = "Man: “Don’t mention it.”"
+late_skip_node = SubResource("Resource_0dagu")
+no_skip_nodes = Array[ExtResource("1_0dagu")]([SubResource("Resource_6d2b0")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

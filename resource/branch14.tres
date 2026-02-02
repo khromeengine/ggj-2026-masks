@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://qrtw2s02m2f2"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_lde0p"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_ecgb7"]
+
+[sub_resource type="Resource" id="Resource_lde0p"]
+script = ExtResource("1_lde0p")
+node_text = "You: “I don’t care-”"
+next_branch = 16
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_ecgb7"]
+script = ExtResource("1_lde0p")
+node_text = "You: “Huh?”"
+next_branch = 15
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_ecgb7")
+branch_text = "Man: “You’ve got something on your face.”"
+late_skip_node = SubResource("Resource_lde0p")
+no_skip_nodes = Array[ExtResource("1_lde0p")]([SubResource("Resource_ecgb7")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

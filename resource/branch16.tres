@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://dxnvj4memt67q"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_7gj2e"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_m1147"]
+
+[sub_resource type="Resource" id="Resource_7gj2e"]
+script = ExtResource("1_7gj2e")
+node_text = "Man: “Haha.”"
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_m1147"]
+script = ExtResource("1_7gj2e")
+choice_text = "(Follow.)"
+node_text = "You: “Thank you, sir.”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_17y6d"]
+script = ExtResource("1_7gj2e")
+choice_text = "(...)"
+node_text = "You: “I- “"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_m1147")
+branch_text = "Man: “Nevermind.”"
+late_skip_node = SubResource("Resource_7gj2e")
+no_skip_nodes = Array[ExtResource("1_7gj2e")]([SubResource("Resource_m1147"), SubResource("Resource_17y6d")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

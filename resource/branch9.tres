@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://bowlidovewfpg"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_k5bhh"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_8dyph"]
+
+[sub_resource type="Resource" id="Resource_k5bhh"]
+script = ExtResource("1_k5bhh")
+node_text = "You: “Next”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_8dyph"]
+script = ExtResource("1_k5bhh")
+choice_text = "(Defy.)"
+node_text = "You: “I do know. There’s no hope for us. Each day is a passing distraction while we lose more and more-”"
+next_branch = 13
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_8plhh"]
+script = ExtResource("1_k5bhh")
+choice_text = "(Drop it.)"
+node_text = "You: “Forget it. Will that be with cash or card?”"
+next_branch = 6
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_8dyph")
+branch_text = "Man: “Well hey, you never know, right? Haha.”"
+late_skip_node = SubResource("Resource_k5bhh")
+no_skip_nodes = Array[ExtResource("1_k5bhh")]([SubResource("Resource_8dyph"), SubResource("Resource_8plhh")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

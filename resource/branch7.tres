@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://bghse7dg2pu8o"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_odkuf"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_qw020"]
+
+[sub_resource type="Resource" id="Resource_odkuf"]
+script = ExtResource("1_odkuf")
+choice_text = "(Keep going.)"
+node_text = "You: “Of course. Swipe whenever you’re ready.”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_qw020")
+branch_text = "Man: “Card. And good. Thanks for asking.”"
+branch_text_unskippable = true
+no_skip_nodes = Array[ExtResource("1_odkuf")]([SubResource("Resource_odkuf")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://bn3pjk47yxfjj"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_alrli"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_tvcrs"]
+
+[sub_resource type="Resource" id="Resource_alrli"]
+script = ExtResource("1_alrli")
+choice_text = "(Move on.)"
+node_text = "You: “Will that be with cash or card?”"
+next_branch = 7
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_tvcrs"]
+script = ExtResource("1_alrli")
+prompts_choice_if_singular = true
+choice_text = "(Move on.)"
+node_text = "You: “Will that be with cash or card?”"
+next_branch = 5
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_tvcrs")
+branch_text = "Man: “Good. Thanks for asking.”"
+late_skip_node = SubResource("Resource_alrli")
+no_skip_nodes = Array[ExtResource("1_alrli")]([SubResource("Resource_tvcrs")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://s1dxi0wft8y4"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_y3aic"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_v5wt2"]
+
+[sub_resource type="Resource" id="Resource_y3aic"]
+script = ExtResource("1_y3aic")
+prompts_choice_if_singular = true
+choice_text = "(Keep up this charade.)"
+node_text = "You: “Swipe whenever you’re ready.”"
+does_end = 1
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_v5wt2")
+branch_text = "Man: “...Card.”"
+branch_text_unskippable = true
+no_skip_nodes = Array[ExtResource("1_y3aic")]([SubResource("Resource_y3aic")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"

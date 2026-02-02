@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="DialogueBranch" format=3 uid="uid://bah7jur5nacb"]
+
+[ext_resource type="Script" uid="uid://d3vf42c4jcigg" path="res://script/dialogue_node.gd" id="1_405sg"]
+[ext_resource type="Script" uid="uid://bj6ul5jagjyvh" path="res://script/dialogue_branch.gd" id="2_hcxev"]
+
+[sub_resource type="Resource" id="Resource_405sg"]
+script = ExtResource("1_405sg")
+node_text = "You: “Will that be with cash or card?”"
+next_branch = 8
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_hcxev"]
+script = ExtResource("1_405sg")
+node_text = "You: “I hate my job. I’ve been stuck here for 13 years. My mother’s hospital bills keep getting higher. I don’t know if I’m going to make it to the end of the month. Sometimes, I wonder if I should just-“"
+next_branch = 9
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_xcokr"]
+script = ExtResource("1_405sg")
+choice_text = "(Move on.)"
+node_text = "You: “Will that be with cash or card?”"
+next_branch = 5
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_fwroa"]
+script = ExtResource("1_405sg")
+choice_text = "“It won’t.”"
+node_text = "You: “It won’t. “"
+next_branch = 10
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[sub_resource type="Resource" id="Resource_ija2h"]
+script = ExtResource("1_405sg")
+choice_text = "“It won’t, but…”"
+node_text = "You: “It won’t, but thanks anyway.”"
+next_branch = 11
+metadata/_custom_type_script = "uid://d3vf42c4jcigg"
+
+[resource]
+script = ExtResource("2_hcxev")
+branch_text = "Man: “Sucks to hear. I hope it gets better.”"
+early_skip_char_threshold = 4
+early_skip_node = SubResource("Resource_405sg")
+late_skip_node = SubResource("Resource_hcxev")
+no_skip_nodes = Array[ExtResource("1_405sg")]([SubResource("Resource_xcokr"), SubResource("Resource_fwroa"), SubResource("Resource_ija2h")])
+metadata/_custom_type_script = "uid://bj6ul5jagjyvh"
